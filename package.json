@@ -11,6 +11,7 @@
     "gatsby-plugin-sharp": "^5.14.0",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -23,6 +24,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public && git add . && git commit -m \"Deploy Gatsby site\" && git push origin main",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
@@ -36,5 +38,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "resolutions": {
+    "react-server-dom-webpack/react": "18.2.0"
   }
 }
